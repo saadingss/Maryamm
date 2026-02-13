@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For You Maryam ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #fad0c4, #ffd1ff);
+      text-align: center;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    h1 { margin-bottom: 20px; }
+    video {
+      width: 90%;
+      max-width: 600px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      z-index: 2;
+    }
+    .heart {
+      position: absolute;
+      font-size: 20px;
+      animation: float 6s linear infinite;
+      opacity: 0.7;
+    }
+    @keyframes float {
+      from { transform: translateY(100vh); }
+      to { transform: translateY(-10vh); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Yayyy ❤️ Love you Maryam!</h1>
+  <p>Saad made this for you.</p>
+
+  <!-- Add Maryam's photo file in the folder and replace maryam.jpg -->
+  <img src="maryam.jpg" alt="Maryam" style="width:160px;height:160px;border-radius:50%;object-fit:cover;margin-bottom:15px;box-shadow:0 5px 15px rgba(0,0,0,0.2);z-index:2;" />
+
+  <!-- Romantic background song -->
+  <!-- Replace song.mp3 with your file of "Can't Take My Eyes Off You" -->
+  <audio autoplay loop>
+    <source src="song.mp3" type="audio/mpeg">
+  </audio>
+
+  <video controls>
+    <source src="video.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <script>
+    for (let i = 0; i < 20; i++) {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.textContent = '💗';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (4 + Math.random() * 4) + 's';
+      heart.style.fontSize = (16 + Math.random() * 20) + 'px';
+      document.body.appendChild(heart);
+    }
+  </script>
+</body>
+</html>
