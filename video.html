@@ -4,17 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            overflow: hidden;
+        }
+        .container {
+            position: relative;
+            text-align: center;
+        }
+        .circular-frame {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: auto;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+        .circular-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        video {
+            width: 100%;
+            max-width: 800px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+        .hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            animation: float 6s infinite;
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Video Page</h1>
-    <img src="maryam.JPG" alt="Maryam Image">
-    <video controls>
-        <source src="WhatsApp Video 2026-02-13 at 7.05.01 PM.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <audio controls>
-        <source src="Various_-_XO_-_John_Mayer_(mp3.pm).mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
+    <div class="container">
+        <div class="circular-frame">
+            <img src="path/to/your/photo.jpg" alt="Profile Photo">
+        </div>
+        <video controls>
+            <source src="path/to/your/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hearts">
+            <img src="path/to/heart/image.png" style="position: absolute; width: 50px; animation: float 10s infinite;">
+        </div>
+    </div>
 </body>
 </html>
